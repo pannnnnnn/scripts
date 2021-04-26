@@ -14,10 +14,10 @@ read dockerinstall
 #公钥
 if [ $key = y ]
     then
-        mkdir .ssh
-        echo "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAqlbyBD6Tst8e+Fja7WcyEzipn9WfKfLM9IGlAlpDvTKugzmVoZqr9CCruUwR8h7S5XJQXePov85Be8MJaBbQKVS28F4Vm+Rzp1NliOiIAXyQufvapxOnrEZL7EaAidYwIrWenKHM2y2pmZ0r1T5Zba2QC674pQP8zgz+MTyCWypxiP4x0mz8mAPJexCXuvT6bJUG10QTRQZj+VVHAjNZuk1ZGtVLIPvXNDgypP75GNUOLwKwMuvcn8VSmdBHureI4gefDkDznqrtASUobmtXO0GbnaD2EBUDE8LxhxuXPvb8w1mN+OWFT38e7QqyHFeXGS1GCC8+XI3HNd6Myc6Z1w== rsa 2048-042620" >> .ssh/authorized_keys
-        chmod 600 .ssh/authorized_keys
-        chmod 700 .ssh
+        mkdir ~/.ssh
+        echo "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAqlbyBD6Tst8e+Fja7WcyEzipn9WfKfLM9IGlAlpDvTKugzmVoZqr9CCruUwR8h7S5XJQXePov85Be8MJaBbQKVS28F4Vm+Rzp1NliOiIAXyQufvapxOnrEZL7EaAidYwIrWenKHM2y2pmZ0r1T5Zba2QC674pQP8zgz+MTyCWypxiP4x0mz8mAPJexCXuvT6bJUG10QTRQZj+VVHAjNZuk1ZGtVLIPvXNDgypP75GNUOLwKwMuvcn8VSmdBHureI4gefDkDznqrtASUobmtXO0GbnaD2EBUDE8LxhxuXPvb8w1mN+OWFT38e7QqyHFeXGS1GCC8+XI3HNd6Myc6Z1w== rsa 2048-042620" >> ~/.ssh/authorized_keys
+        chmod 600 ~/.ssh/authorized_keys
+        chmod 700 ~/.ssh
 fi
 
 #swap
