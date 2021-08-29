@@ -75,7 +75,7 @@ chattr -i /etc/resolv.conf
 rm -f /etc/resolv.conf
 if [ $region = g ]
     then
-        echo -e "nameserver 8.8.8.8\nnameserver 1.1.1.1" > /etc/resolv.conf
+        echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" > /etc/resolv.conf
     else
         echo -e "nameserver 119.29.29.29\nnameserver 223.5.5.5" > /etc/resolv.conf
 fi
