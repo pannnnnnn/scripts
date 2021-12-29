@@ -69,17 +69,22 @@ if [ $timezone = s ]
 fi
 
 #DNS
-apt update
-apt install e2fsprogs -y
-chattr -i /etc/resolv.conf
-rm -f /etc/resolv.conf
-if [ $region = g ]
+echo "DNS?(y/n)"
+read dns
+if [ $dns = y ]
     then
-        echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" > /etc/resolv.conf
-    else
-        echo -e "nameserver 119.29.29.29\nnameserver 223.5.5.5" > /etc/resolv.conf
+        apt update
+        apt install e2fsprogs -y
+        chattr -i /etc/resolv.conf
+        rm -f /etc/resolv.conf
+        if [ $region = g ]
+            then
+                echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" > /etc/resolv.conf
+            else
+                echo -e "nameserver 119.29.29.29\nnameserver 223.5.5.5" > /etc/resolv.conf
+        fi
+        chattr +i /etc/resolv.conf
 fi
-chattr +i /etc/resolv.conf
 
 #update
 if [ $region = c ]
